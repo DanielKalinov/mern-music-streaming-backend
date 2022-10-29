@@ -1,0 +1,19 @@
+{
+  "name": "mern-music-streaming-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielKalinov/mern-music-streaming-backend.git"
+  },
+  "author": "Daniel Kalinov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielKalinov/mern-music-streaming-backend/issues"
+  },
+  "homepage": "https://github.com/DanielKalinov/mern-music-streaming-backend#readme"
+}
