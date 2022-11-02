@@ -17,7 +17,7 @@ const firebaseConfig = {
 const firebase = initializeApp(firebaseConfig);
 const storage = getStorage(firebase);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 const app = express();
 app.use(cors());
 
