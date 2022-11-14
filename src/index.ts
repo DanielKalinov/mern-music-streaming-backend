@@ -2,6 +2,7 @@ import express from 'express';
 import { initializeApp } from 'firebase/app';
 import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 import cors from 'cors';
+import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -13,6 +14,9 @@ const firebaseConfig = {
 	messagingSenderId: '99024871709',
 	appId: '1:99024871709:web:e3018dc0cae624946741f4',
 };
+const dbURI =
+	'mongodb+srv://daniel_12:eHNJzBNgpKEtUoXZ@cluster0.v723pfk.mongodb.net/?retryWrites=true&w=majority';
+mongoose.connect(dbURI).then(() => console.log('Connected to DB.'));
 
 const firebase = initializeApp(firebaseConfig);
 const storage = getStorage(firebase);
