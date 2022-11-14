@@ -16,7 +16,10 @@ const firebaseConfig = {
 };
 const dbURI =
 	'mongodb+srv://daniel_12:eHNJzBNgpKEtUoXZ@cluster0.v723pfk.mongodb.net/?retryWrites=true&w=majority';
-mongoose.connect(dbURI).then(() => console.log('Connected to DB.'));
+mongoose
+	.connect(dbURI)
+	.then(() => console.log('Connected to DB.'))
+	.catch((err) => console.log(err));
 
 const firebase = initializeApp(firebaseConfig);
 const storage = getStorage(firebase);
