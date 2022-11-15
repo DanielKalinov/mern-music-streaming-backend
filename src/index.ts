@@ -32,9 +32,13 @@ app.use(cors());
 app.get('/albums', async (req, res) => {
 	const AllAlbums = await Album.find();
 
-	// const downloadUrl = await getDownloadURL(ref(storage, song?.audioUrl));
-
 	res.send(AllAlbums);
+});
+
+app.get('/albums/:id', async (req, res) => {
+	const album = await Album.findById(req.params.id);
+
+	res.send(album);
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
