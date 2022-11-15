@@ -8,6 +8,7 @@ interface IAlbum {
 		audioUrl: string;
 	}[];
 	albumImageUrl: string;
+	year: string;
 }
 
 const albumSchema = new mongoose.Schema<IAlbum>({
@@ -20,6 +21,7 @@ const albumSchema = new mongoose.Schema<IAlbum>({
 		},
 	],
 	albumImageUrl: String,
+	year: String,
 });
 
 const Album = mongoose.model<IAlbum>('Album', albumSchema);
