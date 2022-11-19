@@ -4,7 +4,10 @@ interface IAlbum {
 	name: string;
 	artist: string;
 	songs: {
+		position: number;
 		title: string;
+		artist: string;
+		albumImageUrl: string;
 		audioUrl: string;
 	}[];
 	albumImageUrl: string;
@@ -16,7 +19,10 @@ const albumSchema = new mongoose.Schema<IAlbum>({
 	name: String,
 	songs: [
 		{
+			position: Number,
 			title: String,
+			artist: String,
+			albumImageUrl: String,
 			audioUrl: String,
 		},
 	],
