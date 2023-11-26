@@ -1,35 +1,13 @@
-import mongoose from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 
-interface IAlbum {
-	name: string;
-	artist: string;
-	songs: {
-		title: string;
-		artist: string;
-		albumImageUrl: string;
-		duration: string;
-		audioUrl: string;
-	}[];
-	albumImageUrl: string;
-	year: string;
-}
-
-const albumSchema = new mongoose.Schema<IAlbum>({
-	artist: String,
+const albumSchema = new Schema({
 	name: String,
-	songs: [
-		{
-			title: String,
-			artist: String,
-			albumImageUrl: String,
-			duration: String,
-			audioUrl: String,
-		},
-	],
-	albumImageUrl: String,
-	year: String,
+	duration: String,
+	year: Number,
+	artist: { type: Schema.Types.ObjectId, ref: 'artist' },
+	tracks: [{ type: Schema.Types.ObjectId, ref: 'track' }],
 });
 
-const Album = mongoose.model<IAlbum>('Album', albumSchema);
+const Album = mongoose.model('album', albumSchema);
 
 export default Album;
