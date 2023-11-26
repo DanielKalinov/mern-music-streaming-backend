@@ -3,7 +3,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import Album from './models/album';
-require('./models/artist');
+import Artist from './models/artist';
 require('./models/track');
 
 dotenv.config();
@@ -19,23 +19,12 @@ const port = process.env.PORT || 5000;
 const app = express();
 app.use(cors());
 
-// Album.findOne({ _id: '6562039b9151454bf5924a7e' })
-// 	.populate({
-// 		path: 'tracks',
-// 		populate: {
-// 			path: 'artist',
-// 			model: 'artist',
-// 		},
-// 	})
-// 	.exec(function (err, album) {
-// 		console.log(album?.tracks);
-// 		// album.tracks[0].artist.name will be populated
-// 	});
-
-app.get('/albums', async (req, res) => {
-	const AllAlbums = await Album.find();
-
-	res.send(AllAlbums);
+app.get('/artists', async (_, res) => {
+	Artist.find()
+		.populate('albums')
+		.exec((_, artists) => {
+			res.send(artists);
+		});
 });
 
 app.get('/albums/:id', async (req, res) => {
