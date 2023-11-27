@@ -2,7 +2,11 @@ import mongoose, { Schema } from 'mongoose';
 
 const trackSchema = new Schema({
 	title: String,
-	artist: { type: Schema.Types.ObjectId, ref: 'artist' },
+	audioUrl: String,
+	album: {
+		type: Schema.Types.ObjectId,
+		ref: 'album',
+	},
 });
 
 const Track = mongoose.model('track', trackSchema);

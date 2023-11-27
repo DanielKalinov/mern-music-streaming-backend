@@ -19,18 +19,48 @@ const port = process.env.PORT || 5000;
 const app = express();
 app.use(cors());
 
-app.get('/artists', async (_, res) => {
-	Artist.find()
-		.populate('albums')
-		.exec((_, artists) => {
-			res.send(artists);
-		});
+// Log error if there is one
+const handleError = (err: NativeError | null) =>
+	err && console.log('Error: ', err);
+
+const executeQuery = (query: any, res: any) => {
+	query.exec((err: NativeError | null, result: any) => {
+		handleError(err);
+		res.send(result);
+	});
+};
+
+// Return all artists
+app.get('/artists', (_, res) => {
+	const query = Artist.find().populate('albums');
+	executeQuery(query, res);
 });
 
-app.get('/albums/:id', async (req, res) => {
-	const album = await Album.findById(req.params.id);
+// Return an artist by id
+app.get('/artist/:id', (req, res) => {
+	const query = Artist.findOne({ _id: req.params.id }).populate({
+		path: 'albums',
+		populate: { path: 'tracks', model: 'track' },
+	});
+	executeQuery(query, res);
+});
 
-	res.send(album);
+// Return an album by id
+app.get('/albums/:id', (req, res) => {
+	const query = Album.findOne({ _id: req.params.id })
+		.populate({
+			path: 'tracks',
+			populate: {
+				path: 'album',
+				model: 'album',
+				populate: {
+					path: 'artist',
+					model: 'artist',
+				},
+			},
+		})
+		.populate('artist');
+	executeQuery(query, res);
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
