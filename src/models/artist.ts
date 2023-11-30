@@ -3,14 +3,8 @@ import mongoose, { Schema } from 'mongoose';
 const artistSchema = new Schema({
 	name: String,
 	bio: String,
-	artistImageUrl: {
-		large: String,
-		small: String,
-	},
-	artistBioImageUrl: {
-		large: String,
-		small: String,
-	},
+	artistImageUrl: String,
+	artistBioImageUrl: String,
 	albums: [
 		{
 			type: Schema.Types.ObjectId,
