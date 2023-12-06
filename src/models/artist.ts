@@ -11,6 +11,12 @@ const artistSchema = new Schema({
 			ref: 'album',
 		},
 	],
+	topTracks: [
+		{
+			type: Schema.Types.ObjectId,
+			ref: 'track',
+		},
+	],
 });
 
 const Artist = mongoose.model('artist', artistSchema);
