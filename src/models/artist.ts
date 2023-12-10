@@ -1,5 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 
+const ObjectId = Schema.Types.ObjectId;
+
 const artistSchema = new Schema({
 	name: String,
 	bio: String,
@@ -7,14 +9,17 @@ const artistSchema = new Schema({
 	artistBioImageUrl: String,
 	albums: [
 		{
-			type: Schema.Types.ObjectId,
+			type: ObjectId,
 			ref: 'album',
 		},
 	],
-	topTracks: [
+	tracks: [
 		{
-			type: Schema.Types.ObjectId,
-			ref: 'track',
+			id: ObjectId,
+			audioUrl: String,
+			artist: { type: ObjectId, ref: 'artist' },
+			title: String,
+			album: { type: ObjectId, ref: 'album' },
 		},
 	],
 });

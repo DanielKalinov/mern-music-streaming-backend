@@ -4,7 +4,6 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import Album from './models/album';
 import Artist from './models/artist';
-require('./models/track');
 
 dotenv.config();
 
@@ -39,37 +38,30 @@ app.get('/artists', (_, res) => {
 // Return an artist by id
 app.get('/artist/:id', (req, res) => {
 	const query = Artist.findOne({ _id: req.params.id })
+		.populate('albums')
 		.populate({
-			path: 'albums',
-			populate: { path: 'tracks', model: 'track' },
+			path: 'tracks',
+			populate: { path: 'artist', model: 'artist' },
 		})
-		.populate({
-			path: 'topTracks',
-			model: 'track',
-			populate: {
-				path: 'album',
-				model: 'album',
-				populate: { path: 'artist', model: 'artist' },
-			},
-		});
+		.populate({ path: 'tracks.artist', model: 'artist' })
+		.populate({ path: 'tracks.album', model: 'album' });
+
 	executeQuery(query, res);
 });
 
 // Return an album by id
 app.get('/albums/:id', (req, res) => {
 	const query = Album.findOne({ _id: req.params.id })
+		.populate('artist')
 		.populate({
 			path: 'tracks',
 			populate: {
-				path: 'album',
-				model: 'album',
-				populate: {
-					path: 'artist',
-					model: 'artist',
-				},
+				path: 'artist',
+				model: 'artist',
 			},
 		})
-		.populate('artist');
+		.populate({ path: 'tracks.album', model: 'album' });
+
 	executeQuery(query, res);
 });
 
