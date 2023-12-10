@@ -10,7 +10,6 @@ const albumSchema = new Schema({
 	albumImageUrl: String,
 	tracks: [
 		{
-			id: ObjectId,
 			audioUrl: String,
 			artist: { type: ObjectId, ref: 'artist' },
 			title: String,

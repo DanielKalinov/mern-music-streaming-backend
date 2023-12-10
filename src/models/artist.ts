@@ -15,7 +15,6 @@ const artistSchema = new Schema({
 	],
 	tracks: [
 		{
-			id: ObjectId,
 			audioUrl: String,
 			artist: { type: ObjectId, ref: 'artist' },
 			title: String,
