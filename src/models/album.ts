@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
+import trackSchema from './track';
 
 const ObjectId = Schema.Types.ObjectId;
 
@@ -8,14 +9,7 @@ const albumSchema = new Schema({
 	year: Number,
 	artist: { type: ObjectId, ref: 'artist' },
 	albumImageUrl: String,
-	tracks: [
-		{
-			audioUrl: String,
-			artist: { type: ObjectId, ref: 'artist' },
-			title: String,
-			album: { type: ObjectId, ref: 'album' },
-		},
-	],
+	tracks: [trackSchema],
 });
 
 const Album = mongoose.model('album', albumSchema);
