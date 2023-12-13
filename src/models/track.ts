@@ -4,7 +4,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const trackSchema = new Schema({
 	audioUrl: String,
-	artist: { type: ObjectId, ref: 'artist' },
+	artist: [{ type: ObjectId, ref: 'artist' }],
 	title: String,
 	album: { type: ObjectId, ref: 'album' },
 });
