@@ -4,6 +4,13 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import Album from './models/album';
 import Artist from './models/artist';
+// import addToTopTracks from './utils/addToTopTracks';
+
+// addToTopTracks({
+// 	artistId: '65761137cd7290801a603822',
+// 	albumId: '65773e1fe6bc4972d5f23353',
+// 	trackId: '65784a1a9cadee7e1fb48f71',
+// });
 
 dotenv.config();
 
