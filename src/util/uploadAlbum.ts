@@ -1,4 +1,3 @@
-//@ts-nocheck
 import mongoose from 'mongoose';
 import Album from '../models/album';
 import Track from '../models/track';
