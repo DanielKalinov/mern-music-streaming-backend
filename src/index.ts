@@ -5,6 +5,9 @@ import dotenv from 'dotenv';
 import Album from './models/album';
 import Artist from './models/artist';
 require('./models/track');
+// import uploadAlbum from './util/uploadAlbum';
+
+// uploadAlbum();
 
 dotenv.config();
 
