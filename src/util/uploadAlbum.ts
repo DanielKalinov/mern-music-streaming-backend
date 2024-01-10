@@ -11,109 +11,93 @@ const uploadAlbum = () => {
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FChernozem%20(Intro).mp3?alt=media&token=24251b08-bfb4-4333-a611-50bc6036e220',
-			artist: [artistId],
-			title: 'Chernozem - Intro',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FFar%20%26%20Off.mp3?alt=media&token=110fb3d2-083d-4e83-a6f3-bd7526ae17da',
+			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+			title: 'Aerochord (Apsis Edit)',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FIris%20Rotation.mp3?alt=media&token=b7bbb801-5de0-4f77-bf7a-ea54564a86f3',
-			artist: [artistId],
-			title: 'Iris Rotation',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FDiffraction%20Protocol.mp3?alt=media&token=84330e75-e8c8-4e92-94a8-9777e0ec6c4e',
+			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+			title: 'Coriolis Effect',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FDusts.mp3?alt=media&token=5f956cee-1bd8-4cf7-8e1c-9296f0534151',
-			artist: [artistId],
-			title: 'Dusts',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FCut.mp3?alt=media&token=8563953a-e138-4c7d-af07-ea1d9363e475',
+			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+			title: 'Amalthea (Innerve Edit)',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FOpalin.mp3?alt=media&token=bede3eb5-2b00-44ac-bd50-e30338c95e0f',
-			artist: [artistId],
-			title: 'Opalin',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FSmall%20Things%20Matter.mp3?alt=media&token=6f50f9bc-be9a-4d03-b508-bb1a9fc823ac',
+			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+			title: 'Hiding In The Clouds',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FMemory%20Shell%20(Lost%20Radio%20Edit).mp3?alt=media&token=9a14fcbf-1080-4263-a8d5-659c62e81b81',
-			artist: [artistId],
-			title: 'Memory Shell - Lost Radio Edit',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FAlkaline.mp3?alt=media&token=0af50b30-e9ed-468b-b1a1-0454c5e8127e',
+			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+			title: 'Omrids',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FHaze.mp3?alt=media&token=d51bca2f-0dcd-44c2-85e6-9027fb55f314',
-			artist: [artistId],
-			title: 'Haze',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FParenthesis.mp3?alt=media&token=08260785-e7e3-4558-ab25-1d6064931174',
+			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+			title: 'Strommast (Amperes Edit)',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FShouting%20Valley.mp3?alt=media&token=81f6d3e9-eee5-4245-bfc0-98ff37bb6464',
-			artist: [artistId],
-			title: 'Shouting Valley',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FSulfur.mp3?alt=media&token=ce0ec5c3-2a67-49cb-9c66-a06d95844913',
+			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+			title: 'Terrene Part 1',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FCities%20Update.mp3?alt=media&token=c0295493-7316-46bd-a61a-1c23d889e187',
-			artist: [artistId],
-			title: 'Cities Update',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FEvenfall.mp3?alt=media&token=6f5ce58c-0765-4ca1-99a6-f738f8894412',
+			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+			title: 'Terrene Part 2',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FSubmorphing.mp3?alt=media&token=7b70bffb-796c-42ba-98ee-cf20c6b5e7c9',
-			artist: [artistId],
-			title: 'Submorphing',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FThe%20Unexpected%20Hours.mp3?alt=media&token=384109db-4b84-4256-931c-4397523aa4fc',
+			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+			title: 'Finnmark',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FGrounds%20Around.mp3?alt=media&token=84025a8e-3c56-42ec-82bc-abb1f46cb9cc',
-			artist: [artistId],
-			title: 'Grounds Around',
-			album: albumId,
-		},
-		{
-			_id: new mongoose.Types.ObjectId(),
-			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FExposure%20(AES%20Dana%20Remix).mp3?alt=media&token=c1b3c6a2-adb2-42c4-acb1-825a75b11dc2',
-			artist: [artistId],
-			title: 'Exposure - AES Dana Remix',
-			album: albumId,
-		},
-		{
-			_id: new mongoose.Types.ObjectId(),
-			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FMemory%20Shell%2FChernozem%20(Closing).mp3?alt=media&token=4334d8fb-1aa3-48ae-af8b-db2be5220794',
-			artist: [artistId],
-			title: 'Chernozem - Closing',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FThe%20Unexpected%20Hours.mp3?alt=media&token=384109db-4b84-4256-931c-4397523aa4fc',
+			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+			title: 'Hindmost',
 			album: albumId,
 		},
 	];
 
 	new Album({
 		_id: albumId,
-		name: 'Memory Shell',
-		duration: '1h 10m',
-		year: 2004,
-		artist: [artistId],
+		name: 'Terrene',
+		duration: '1h 14m',
+		year: 2022,
+		artist: ['659ed8a374b2bdaaffcf7d15', artistId],
 		albumImageUrl:
-			'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/album-images%2FAES%20Dana%2FMemory%20Shell.jpg?alt=media&token=e1715fb6-87a4-4f47-a140-88bd19707525',
+			'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/album-images%2FAES%20Dana%2FTerrene.jpg?alt=media&token=130cd1bc-10c4-4375-a51b-a671306d68fe',
 		tracks: albumTracks.map((item) => ({
 			track: { ...item },
 			_id: new mongoose.Types.ObjectId(),
