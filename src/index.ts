@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import Album from './models/album';
 import Artist from './models/artist';
+require('./models/track');
 
 dotenv.config();
 
@@ -40,11 +41,13 @@ app.get('/artist/:id', (req, res) => {
 	const query = Artist.findOne({ _id: req.params.id })
 		.populate('albums')
 		.populate({
-			path: 'tracks',
-			populate: { path: 'artist', model: 'artist' },
-		})
-		.populate({ path: 'tracks.artist', model: 'artist' })
-		.populate({ path: 'tracks.album', model: 'album' });
+			path: 'tracks.track',
+			model: 'track',
+			populate: [
+				{ path: 'artist', model: 'artist' },
+				{ path: 'album', model: 'album' },
+			],
+		});
 
 	executeQuery(query, res);
 });
@@ -54,13 +57,13 @@ app.get('/albums/:id', (req, res) => {
 	const query = Album.findOne({ _id: req.params.id })
 		.populate('artist')
 		.populate({
-			path: 'tracks',
-			populate: {
-				path: 'artist',
-				model: 'artist',
-			},
-		})
-		.populate({ path: 'tracks.album', model: 'album' });
+			path: 'tracks.track',
+			model: 'track',
+			populate: [
+				{ path: 'artist', model: 'artist' },
+				{ path: 'album', model: 'album' },
+			],
+		});
 
 	executeQuery(query, res);
 });

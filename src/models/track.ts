@@ -9,4 +9,6 @@ const trackSchema = new Schema({
 	album: { type: ObjectId, ref: 'album' },
 });
 
-export default trackSchema;
+const Track = mongoose.model('track', trackSchema);
+
+export default Track;
