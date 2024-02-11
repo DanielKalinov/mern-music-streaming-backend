@@ -39,7 +39,17 @@ app.get('/artists', (_, res) => {
 // Return an artist by id
 app.get('/artist/:id', (req, res) => {
 	const query = Artist.findOne({ _id: req.params.id })
-		.populate('albums')
+		.populate({
+			path: 'albums',
+			populate: {
+				path: 'tracks.track',
+				model: 'track',
+				populate: [
+					{ path: 'artist', model: 'artist' },
+					{ path: 'album', model: 'album' },
+				],
+			},
+		})
 		.populate({
 			path: 'tracks.track',
 			model: 'track',
