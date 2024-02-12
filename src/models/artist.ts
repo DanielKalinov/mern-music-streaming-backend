@@ -4,7 +4,7 @@ const ObjectId = Schema.Types.ObjectId;
 
 const artistSchema = new Schema({
 	name: String,
-	bio: String,
+	about: String,
 	artistImageUrl: String,
 	artistBioImageUrl: String,
 	albums: [
