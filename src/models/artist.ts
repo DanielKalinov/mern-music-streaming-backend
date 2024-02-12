@@ -6,7 +6,7 @@ const artistSchema = new Schema({
 	name: String,
 	about: String,
 	artistImageUrl: String,
-	artistBioImageUrl: String,
+	artistAboutImageUrl: String,
 	albums: [
 		{
 			type: ObjectId,
