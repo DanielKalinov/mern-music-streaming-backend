@@ -32,7 +32,16 @@ const executeQuery = (query: any, res: any) => {
 
 // Return all artists
 app.get('/artists', (_, res) => {
-	const query = Artist.find().populate('albums');
+	const query = Artist.find()
+		.populate('albums')
+		.populate({
+			path: 'tracks.track',
+			model: 'track',
+			populate: [
+				{ path: 'artist', model: 'artist' },
+				{ path: 'album', model: 'album' },
+			],
+		});
 	executeQuery(query, res);
 });
 
