@@ -4,100 +4,116 @@ import Track from '../models/track';
 import Artist from '../models/artist';
 
 const uploadAlbum = () => {
-	const artistId = '65761137cd7290801a603822';
+	const artistId = '65d0dd4c71e5d43f64635411';
 	const albumId = new mongoose.Types.ObjectId();
 
 	const albumTracks = [
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FFar%20%26%20Off.mp3?alt=media&token=110fb3d2-083d-4e83-a6f3-bd7526ae17da',
-			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
-			title: 'Aerochord (Apsis Edit)',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FTraverse.mp3?alt=media&token=30ddc1fe-bf89-4c1d-96a4-32712be990da',
+			artist: [artistId],
+			title: 'Traverse',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FDiffraction%20Protocol.mp3?alt=media&token=84330e75-e8c8-4e92-94a8-9777e0ec6c4e',
-			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
-			title: 'Coriolis Effect',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FOkalite.mp3?alt=media&token=97ba2209-2054-4268-beef-e1ccc62d6c66',
+			artist: [artistId],
+			title: 'Okalite',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FCut.mp3?alt=media&token=8563953a-e138-4c7d-af07-ea1d9363e475',
-			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
-			title: 'Amalthea (Innerve Edit)',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FCrimean%20Mountains.mp3?alt=media&token=291ff8bf-0f2b-4c1c-9b96-6431a909595a',
+			artist: [artistId],
+			title: 'Crimean Mountains',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FSmall%20Things%20Matter.mp3?alt=media&token=6f50f9bc-be9a-4d03-b508-bb1a9fc823ac',
-			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
-			title: 'Hiding In The Clouds',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FAncestry.mp3?alt=media&token=175e6844-5c5e-41e5-a8ea-a914845b8194',
+			artist: [artistId],
+			title: 'Ancestry',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FAlkaline.mp3?alt=media&token=0af50b30-e9ed-468b-b1a1-0454c5e8127e',
-			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
-			title: 'Omrids',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FTreeline.mp3?alt=media&token=62aa211f-84b9-4a5b-bf2e-970980fff002',
+			artist: [artistId],
+			title: 'Treeline',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FParenthesis.mp3?alt=media&token=08260785-e7e3-4558-ab25-1d6064931174',
-			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
-			title: 'Strommast (Amperes Edit)',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FDistance%20C.mp3?alt=media&token=89795d63-b00c-4bd3-831b-120821279b8b',
+			artist: [artistId],
+			title: 'Distance C',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FSulfur.mp3?alt=media&token=ce0ec5c3-2a67-49cb-9c66-a06d95844913',
-			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
-			title: 'Terrene Part 1',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FSubtleties%20at%20Dawn.mp3?alt=media&token=957e3262-4707-47b0-84ea-772d97e8a693',
+			artist: [artistId],
+			title: 'Subtleties at Dawn',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FEvenfall.mp3?alt=media&token=6f5ce58c-0765-4ca1-99a6-f738f8894412',
-			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
-			title: 'Terrene Part 2',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FDissolve.mp3?alt=media&token=d042752a-0868-4aca-a75b-a2a07b0925aa',
+			artist: [artistId],
+			title: 'Disolve',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FThe%20Unexpected%20Hours.mp3?alt=media&token=384109db-4b84-4256-931c-4397523aa4fc',
-			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
-			title: 'Finnmark',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FMin%20Us.mp3?alt=media&token=c6e6e6cd-b536-4a60-af1b-3458b8bdc7c2',
+			artist: [artistId],
+			title: 'Min Us',
 			album: albumId,
 		},
 		{
 			_id: new mongoose.Types.ObjectId(),
 			audioUrl:
-				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FAES%20Dana%2FFar%20%26%20Off%2FThe%20Unexpected%20Hours.mp3?alt=media&token=384109db-4b84-4256-931c-4397523aa4fc',
-			artist: ['659ed8a374b2bdaaffcf7d15', artistId],
-			title: 'Hindmost',
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FPulvis.mp3?alt=media&token=2a6644fa-f44b-4d48-bb39-bc83f0770108',
+			artist: [artistId],
+			title: 'Pulvis',
+			album: albumId,
+		},
+		{
+			_id: new mongoose.Types.ObjectId(),
+			audioUrl:
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FUnphysical%20Body.mp3?alt=media&token=eb670534-6024-4ac2-9f56-ed375c5e79d9',
+			artist: [artistId],
+			title: 'Unphysical Body',
+			album: albumId,
+		},
+		{
+			_id: new mongoose.Types.ObjectId(),
+			audioUrl:
+				'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/music%2FMartin%20Nonstatic%2FTreeline%2FAdventus.mp3?alt=media&token=01f665a0-a4d9-4d44-ba94-3f3525faffd9',
+			artist: [artistId],
+			title: 'Adventus',
 			album: albumId,
 		},
 	];
 
 	new Album({
 		_id: albumId,
-		name: 'Terrene',
-		duration: '1h 14m',
-		year: 2022,
-		artist: ['659ed8a374b2bdaaffcf7d15', artistId],
+		name: 'Treeline',
+		duration: '1h 15m',
+		year: 2020,
+		artist: [artistId],
 		albumImageUrl:
-			'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/album-images%2FAES%20Dana%2FTerrene.jpg?alt=media&token=130cd1bc-10c4-4375-a51b-a671306d68fe',
+			'https://firebasestorage.googleapis.com/v0/b/mern-music-streaming-9eace.appspot.com/o/album-images%2FMartin%20Nonstatic%2FTreeline.jpg?alt=media&token=7b97bdf9-ee81-4381-b237-df0440078995',
 		tracks: albumTracks.map((item) => ({
 			track: { ...item },
 			_id: new mongoose.Types.ObjectId(),
