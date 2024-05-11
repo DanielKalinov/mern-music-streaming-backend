@@ -88,6 +88,7 @@ app.get('/albums/:id', (req, res) => {
   executeQuery(query, res);
 });
 
+// Return all playlists
 app.get('/playlists', (_, res) => {
   const query = Playlist.find().populate({
     path: 'tracks.track',
@@ -97,6 +98,20 @@ app.get('/playlists', (_, res) => {
       { path: 'album', model: 'album' },
     ],
   });
+  executeQuery(query, res);
+});
+
+// Return a playlist by id
+app.get('/playlists/:id', (req, res) => {
+  const query = Playlist.findOne({ _id: req.params.id }).populate({
+    path: 'tracks.track',
+    model: 'track',
+    populate: [
+      { path: 'artist', model: 'artist' },
+      { path: 'album', model: 'album' },
+    ],
+  });
+
   executeQuery(query, res);
 });
 
